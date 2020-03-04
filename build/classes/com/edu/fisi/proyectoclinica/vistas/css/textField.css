@@ -1,0 +1,5 @@
+.jfx-text-field {
+-fx-prompt-text-fill: #989898;
+-jfx-focus-color: #00695c;
+-jfx-unfocus-color: #009688;
+}

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="root" fx:id="anchorPane" prefHeight="510.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edu.fisi.proyectoclinica.vistas.MainUsuarioController">
+    <children>
+        <Pane layoutY="-2.0" prefHeight="30.0" prefWidth="788.0" style="-fx-background-color: #39A57F;">
+            <children>
+                <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="752.0" layoutY="5.0" onMouseClicked="#cerrar" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/close.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="721.0" layoutY="4.0" onMouseClicked="#BtnCerrar" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/casa.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <JFXTabPane layoutY="24.0" prefHeight="476.0" prefWidth="700.0" stylesheets="@css/tab.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0">
+            <tabs>
+                <Tab text="Nuevo Paciente">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #EEEEEE;">
+                            <children>
+                                <GridPane hgap="10.0" layoutX="26.0" layoutY="30.0" prefHeight="396.0" prefWidth="736.0" stylesheets="@css/gridPane.css" vgap="15.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.0" minWidth="10.0" prefWidth="124.0" />
+                                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="406.0" minWidth="-Infinity" prefWidth="406.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label stylesheets="@css/label.css" text="Apellidos" GridPane.rowIndex="2" />
+                                        <Label prefHeight="17.0" prefWidth="98.0" stylesheets="@css/label.css" text="Nombres" GridPane.rowIndex="1" />
+                                        <Label prefHeight="17.0" prefWidth="106.0" stylesheets="@css/label.css" text="Fecha Nacimiento" GridPane.rowIndex="3" />
+                                        <Label stylesheets="@css/label.css" text="direccion" GridPane.rowIndex="4" />
+                                        <Label stylesheets="@css/label.css" text="Telefono" GridPane.rowIndex="5" />
+                                        <Label stylesheets="@css/label.css" text="DNI" />
+                                        <JFXTextField fx:id="txtApellidos" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="187.0" promptText="Kochi Nagamine" stylesheets="@css/textField.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                        <JFXTextField fx:id="txtNombres" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="185.0" promptText="Jimmy Hideyoshi" stylesheets="@css/textField.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                        <JFXTextField fx:id="txtDNI" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="123.0" promptText="12345678" stylesheets="@css/textField.css" GridPane.columnIndex="1" />
+                                        <JFXTextField fx:id="txtDireccion" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="328.0" promptText="Direccion" stylesheets="@css/textField.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                        <JFXTextField fx:id="txtTelefono" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="165.0" promptText="Telefono" stylesheets="@css/textField.css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                        <JFXDatePicker fx:id="fechaNac" promptText="dd/mm/aaaa" stylesheets="@css/datePicker.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                        <JFXButton fx:id="btnCrearHistoria" onAction="#BtnAñadirPaciente" stylesheets="@css/button.css" text="Crear paciente" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+                              <Label stylesheets="@css/label.css" text="Celular" GridPane.rowIndex="6" />
+                              <JFXTextField fx:id="txtCelular" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="165.0" promptText="Celular" stylesheets="@css/textField.css" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label stylesheets="@css/label.css" text="Genero" GridPane.rowIndex="7" />
+                              <Label stylesheets="@css/label.css" text="Tipo de sangre" GridPane.rowIndex="8" />
+                              <JFXComboBox fx:id="comboGenero" promptText="Genero" stylesheets="@css/comboBox.css" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <JFXComboBox fx:id="comboTipoSangre" promptText="Tipo de sangre" stylesheets="@css/comboBox.css" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Mostrar Pacientes">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="788.0" style="-fx-background-color: #EEEEEE;">
+                            <children>
+                                <TableView fx:id="tablePacientes" editable="true" layoutY="48.0" prefHeight="353.0" prefWidth="788.0" stylesheets="@css/tableView.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0">
+                                    <columns>
+                                        <TableColumn fx:id="columDNI" prefWidth="78.0" text="DNI" />
+                                        <TableColumn fx:id="columApellidos" prefWidth="110.0" text="Apellidos" />
+                                        <TableColumn fx:id="columNombres" prefWidth="137.0" text="Nombres" />
+                                        <TableColumn id="FechaNac" fx:id="columFechaN" prefWidth="142.0" text="Fecha Nacimiento" />
+                                        <TableColumn fx:id="columTelef" prefWidth="86.0" text="Telefono" />
+                                        <TableColumn fx:id="columCel" prefWidth="93.0" text="Celular" />
+                              <TableColumn fx:id="columTipoSangre" prefWidth="71.0" text="tipoSangre" />
+                                        <TableColumn fx:id="columGenero" prefWidth="58.0" text="Genero" />
+                                    </columns>
+                                </TableView>
+                                <JFXTextField fx:id="txtBuscarDNI" labelFloat="true" layoutX="472.0" layoutY="15.0" promptText="DNI" stylesheets="@css/textField.css">
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                </JFXTextField>
+                                <JFXButton fx:id="btnBuscarPaciente" layoutX="623.0" layoutY="15.0" onAction="#btnBuscarPaciente" stylesheets="@css/button.css" text="Buscar" />
+                                <JFXButton fx:id="btnMostrarTodo" layoutX="685.0" layoutY="15.0" onAction="#btnMostrarTodo" stylesheets="@css/button.css" text="Mostrar Todo" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Citas">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #EEEEEE;">
+                            <children>
+                                <GridPane hgap="10.0" layoutX="125.0" layoutY="28.0" prefHeight="184.0" prefWidth="539.0" style="-fx-padding: 15;" stylesheets="@css/gridPane.css" vgap="15.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.0" minWidth="10.0" prefWidth="110.0" />
+                                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="406.0" minWidth="-Infinity" prefWidth="135.0" />
+                                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="171.0" minWidth="108.0" prefWidth="135.0" />
+                                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="171.0" minWidth="111.0" prefWidth="118.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label stylesheets="@css/label.css" text="Horarios" GridPane.rowIndex="4" />
+                                        <Label stylesheets="@css/label.css" text="DNI" />
+                                        <Label stylesheets="@css/label.css" text="Especialidad" GridPane.rowIndex="1" />
+                                        <Label stylesheets="@css/label.css" text="Medico" GridPane.rowIndex="3" />
+                                        <JFXTextField fx:id="txtDniCita" maxWidth="-Infinity" prefHeight="25.0" prefWidth="72.0" promptText="12345678" stylesheets="@css/textField.css" GridPane.columnIndex="1" />
+                                        <JFXTextField fx:id="txtCitaApellido" labelFloat="true" promptText="Apellidos" stylesheets="@css/textField.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                        <JFXTextField fx:id="txtCitaNombre" labelFloat="true" promptText="Nombres" stylesheets="@css/textField.css" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                        <JFXComboBox fx:id="choiceEspecialidad" prefHeight="25.0" prefWidth="114.0" promptText="especialidad" stylesheets="@css/comboBox.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                        <JFXComboBox fx:id="choiceHorarios" prefHeight="25.0" prefWidth="122.0" promptText="horarios" stylesheets="@css/comboBox.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                        <JFXButton fx:id="btnCrearCitaEspecialidad" onAction="#BtnSacarCitaEspecialidad" prefHeight="25.0" prefWidth="70.0" stylesheets="@css/button.css" text="Sacar cita" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                                        <JFXButton fx:id="btnBuscarMed" onAction="#BtnBuscarMed" prefHeight="25.0" prefWidth="70.0" stylesheets="@css/button.css" text="Buscar" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                                        <JFXButton fx:id="btnCrearCitaMedico" onAction="#BtnSacarCitaMedico" prefHeight="25.0" prefWidth="70.0" stylesheets="@css/button.css" text="Sacar cita" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+                              <JFXDatePicker fx:id="fechaCitas" GridPane.columnIndex="3" />
+                              <Label stylesheets="@css/label.css" text="Fecha" GridPane.columnIndex="2" />
+                              <JFXComboBox fx:id="choiceSedes" prefHeight="25.0" prefWidth="114.0" promptText="Sedes" stylesheets="@css/comboBox.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label stylesheets="@css/label.css" text="Sedes" GridPane.rowIndex="2" />
+
+                                    </children>
+                                </GridPane>
+                                <JFXTextArea fx:id="txtMostrarHorario" editable="false" layoutX="41.0" layoutY="246.0" prefHeight="160.0" prefWidth="725.0" style="-fx-border-color: #39A57F; -jfx-focus-color: transparent; -jfx-unfocus-color: transparent;" stylesheets="@css/textArea.css" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Mostar Citas">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #EEEEEE;">
+                            <children>
+                                <TableView fx:id="tablaCitas" editable="true" layoutY="52.0" prefHeight="404.0" prefWidth="798.0" stylesheets="@css/tableView.css">
+                                    <columns>
+                                        <TableColumn fx:id="columNumCita" prefWidth="46.0" text="N° Cita" />
+                                        <TableColumn fx:id="columDNI1" prefWidth="90.0" text="DNI" />
+                                        <TableColumn fx:id="columApellidos1" prefWidth="105.0" text="Paciente" />
+                                        <TableColumn fx:id="columMedico" prefWidth="110.0" text="Medico" />
+                                        <TableColumn fx:id="columEspecialidad" prefWidth="116.0" text="Especialidad" />
+                                        <TableColumn fx:id="columFecha" minWidth="0.0" prefWidth="88.0" text="Fecha" />
+                                        <TableColumn fx:id="columHora" minWidth="0.0" prefWidth="78.0" text="Hora" />
+                              <TableColumn fx:id="columSede" minWidth="8.0" prefWidth="150.0" text="Sede" />
+                                    </columns>
+                                </TableView>
+                                <JFXTextField fx:id="txtBuscarCitaDNI" labelFloat="true" layoutX="460.0" layoutY="15.0" promptText="DNI" stylesheets="@css/textField.css">
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                </JFXTextField>
+                                <JFXButton layoutX="611.0" layoutY="15.0" onAction="#btnBuscarCitaDNI" stylesheets="@css/button.css" text="Buscar" />
+                                <JFXButton layoutX="685.0" layoutY="15.0" onAction="#btnMostrarCitas" stylesheets="@css/button.css" text="Mostrar Todo" />
+                                <JFXComboBox fx:id="choiceEspecialidadesCita" layoutX="64.0" layoutY="15.0" prefHeight="25.0" prefWidth="115.0" promptText="Especialidades" stylesheets="@css/comboBox.css" />
+                                <JFXButton layoutX="193.0" layoutY="15.0" onAction="#btnBuscarCitaEspecialidad" stylesheets="@css/button.css" text="Buscar por Especialidad" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </JFXTabPane>
+    </children>
+</AnchorPane>
