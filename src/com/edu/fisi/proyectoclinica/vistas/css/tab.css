@@ -1,0 +1,16 @@
+.jfx-tab-pane .headers-region {
+    -fx-background-color: #39A57F;
+}
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: #39A57F;
+}
+.jfx-tab-pane .tab-header-area .tab-selected-line
+{
+-fx-background-color: #F5F5F5;
+}
+.jfx-tab-pane .headers-region .tab .tab-container .tab-label {
+    -fx-text-fill: rgba(255,255,255, .87);
+    -fx-font-weight: BOLD;
+    -fx-padding: 4 10 6 10;
+    -fx-font-size: 14;
+}

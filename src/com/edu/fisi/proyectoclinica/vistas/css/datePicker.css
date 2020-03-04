@@ -1,0 +1,5 @@
+.jfx-date-picker .jfx-text-field { 
+-jfx-unfocus-color: #009688;
+ -jfx-focus-color: #00695c;
+-fx-prompt-text-fill: #989898;
+}

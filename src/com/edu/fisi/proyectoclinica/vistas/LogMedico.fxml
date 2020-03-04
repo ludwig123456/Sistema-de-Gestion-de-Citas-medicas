@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<AnchorPane fx:id="root" prefHeight="271.0" prefWidth="600.0" style="-fx-background-color: #EEEEEE;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edu.fisi.proyectoclinica.vistas.LogMedicoController">
+   <children>
+      <Pane layoutY="253.0" prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: #39A57F;" />
+      <GridPane hgap="10.0" layoutX="52.0" layoutY="118.0" prefHeight="56.0" prefWidth="509.0" style="-fx-padding: 15;" stylesheets="@css/gridPane.css" vgap="15.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.0" minWidth="10.0" prefWidth="110.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="406.0" minWidth="-Infinity" prefWidth="130.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="171.0" minWidth="95.0" prefWidth="108.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="171.0" minWidth="95.0" prefWidth="108.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="93.0" stylesheets="@css/label.css" text="Numero Cita" />
+            <JFXTextField fx:id="txtAtencionCita" maxWidth="-Infinity" prefHeight="25.0" prefWidth="69.0" promptText="123456" stylesheets="@css/textField.css" GridPane.columnIndex="1" />
+            <JFXButton onAction="#btnAtender" prefHeight="25.0" prefWidth="70.0" stylesheets="@css/button.css" text="Atender" GridPane.columnIndex="2" GridPane.halignment="LEFT" />
+            <JFXButton onAction="#btnEliminarCita" prefHeight="25.0" prefWidth="84.0" stylesheets="@css/button.css" text="Eliminar cita" GridPane.columnIndex="3" />
+         </children>
+      </GridPane>
+      <ImageView fitHeight="235.0" fitWidth="228.0" layoutX="186.0" layoutY="37.0" mouseTransparent="true" opacity="0.1" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/simbolo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="52.0" layoutY="87.0" prefHeight="17.0" prefWidth="156.0" style="-fx-font-weight: bold; -fx-font-size: 15;" text="Atender cita" textFill="#009688" />
+      <Pane prefHeight="37.0" prefWidth="600.0" style="-fx-background-color: #39A57F;">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="574.0" layoutY="6.0" onMouseClicked="#cerrar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/close.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="543.0" layoutY="7.0" onMouseClicked="#BtnCerrar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/casa.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

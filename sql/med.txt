@@ -1,0 +1,9 @@
+idmedico,Numbers,Integer,10000000|99999999
+nombre,Human,First Name,True|True
+apellido,Human,Last Name,True|True
+especialidad,Set,From Fixed List,0,0,pediatria|medicina general|urologia|gastrologia|psiquiatria|neurologia|cardiologia|otorrinolaringologia|dermatologia|oftalmologia
+fecha_nac,Time,Date,18073|32690|3|False|YYYY-MM-DD|h:nn:ss
+genero,Set,From Fixed List,0,0,M|F
+direccion,Human,Street Address
+celular,Numbers,Integer,900000000|999999999
+telefono,Numbers,Integer,1000000|9999999

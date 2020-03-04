@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="root" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #EEEEEE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edu.fisi.proyectoclinica.vistas.LoginController">
+   <children>
+      <AnchorPane layoutX="148.0" layoutY="132.0" prefHeight="210.0" prefWidth="316.0" style="-fx-border-color: #009688; -fx-border-width: 2; -fx-background-color: #ecf0f1;">
+         <children>
+            <JFXTextField fx:id="textFieldUsuario" focusColor="#00695c" labelFloat="true" layoutX="60.0" layoutY="43.0" prefHeight="25.0" prefWidth="230.0" promptText="Usuario" stylesheets="@css/textField.css" unFocusColor="#009688" />
+            <JFXPasswordField fx:id="textFieldContra" focusColor="#00695c" layoutX="60.0" layoutY="105.0" prefHeight="25.0" prefWidth="230.0" promptText="Contraseña" style="-fx-prompt-text-fill: #989898;" unFocusColor="#009688" />
+            <JFXButton fx:id="btnIngresar" buttonType="RAISED" layoutX="215.0" layoutY="161.0" onAction="#botonIngresar" ripplerFill="WHITE" style="-fx-background-color: #009688;" text="Ingresar" textAlignment="CENTER" textFill="#fcf8f8">
+               <effect>
+                  <Bloom />
+               </effect>
+            </JFXButton>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="21.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/usuario.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="21.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/contrasena.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="361.0" fitWidth="383.0" layoutX="126.0" layoutY="73.0" mouseTransparent="true" opacity="0.1" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/simbolo.png" />
+         </image>
+      </ImageView>
+      <AnchorPane>
+         <children>
+            <Pane prefHeight="91.0" prefWidth="600.0" style="-fx-background-color: #39A57F;">
+               <children>
+                  <Text fill="WHITE" fontSmoothingType="LCD" layoutX="28.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestor de establecimientos de salud">
+                     <font>
+                        <Font name="Serif Regular" size="38.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="574.0" layoutY="6.0" onMouseClicked="#cerrar" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/close.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Pane layoutY="434.0" prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: #39A57F;" />
+   </children>
+</AnchorPane>
