@@ -1,0 +1,21 @@
+Username: srCJBiHopD
+
+Database name: srCJBiHopD
+
+Password: yxqw3SBQwW
+
+Server: remotemysql.com
+
+Port: 3306
+
+d813760@urhen.com
+
+
+
+
+
+AMAZON
+bica.cwkmzboxgefl.ca-central-1.rds.amazonaws.com
+root
+fisi2018
+BD:bica
